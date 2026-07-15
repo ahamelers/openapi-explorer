@@ -609,8 +609,8 @@ export default class ApiRequest extends LitElement {
                 }
                 e.target.parentElement.children[newIndex].focus();
               }}">
-                <button class="tab-btn ${this.activeSchemaTab === 'model' ? 'active' : ''}" id="schema-model-button" aria-controls="schema-model-body" aria-selected="${this.activeSchemaTab === 'model'}" tabindex="${this.activeSchemaTab === 'model' ? 0 : '-1'}" data-tab="model" >${getI18nText('operations.model')}</button>
-                <button class="tab-btn ${this.activeSchemaTab !== 'model' ? 'active' : ''}" id="schema-body-button" aria-controls="schema-body-body" aria-selected="${this.activeSchemaTab !== 'model'}" tabindex="${this.activeSchemaTab !== 'model' ? 0 : '-1'}" data-tab="body">${bodyTabNameUseBody ? getI18nText('operations.body') : getI18nText('operations.form')}</button>
+                <button class="tab-btn ${this.activeSchemaTab === 'model' ? 'active' : ''}" id="schema-model-button" role="tab" aria-controls="schema-model-body" aria-selected="${this.activeSchemaTab === 'model'}" tabindex="${this.activeSchemaTab === 'model' ? 0 : '-1'}" data-tab="model" >${getI18nText('operations.model')}</button>
+                <button class="tab-btn ${this.activeSchemaTab !== 'model' ? 'active' : ''}" id="schema-body-button" role="tab" aria-controls="schema-body-body" aria-selected="${this.activeSchemaTab !== 'model'}" tabindex="${this.activeSchemaTab !== 'model' ? 0 : '-1'}" data-tab="body">${bodyTabNameUseBody ? getI18nText('operations.body') : getI18nText('operations.form')}</button>
               </div>
               ${html`<div class="tab-content col" id="schema-model-body" tabindex="0" aria-labelledby="schema-model-button" role="tabpanel" style="display: ${this.activeSchemaTab === 'model' ? 'block' : 'none'}"> ${reqBodySchemaHtml}</div>`}
               ${html`<div class="tab-content col" id="schema-body-body" tabindex="0" aria-labelledby="schema-body-button" role="tabpanel" style="display: ${this.activeSchemaTab === 'model' ? 'none' : 'block'}"> ${reqBodyDefaultHtml}</div>`}

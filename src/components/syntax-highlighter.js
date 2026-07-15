@@ -106,6 +106,7 @@ class SyntaxHighlighter extends LitElement {
    */
   renderHighlight() {
     const lang = this.detectLanguage();
+    const label = this.label?.toLowerCase();
     const grammar = Prism.languages[lang];
 
     if (typeof this.content !== 'string') {
@@ -115,8 +116,8 @@ class SyntaxHighlighter extends LitElement {
     const stringContent = this.content?.toString() || '';
     const increasedSpaceContent = lang !== 'python' && lang !== 'yaml' && lang !== 'toml' ? stringContent.split('\n').map(line => line.replace(/^\s{2}/g, '    ')).join('\n') : stringContent;
     return grammar
-      ? html`<pre><code>${unsafeHTML(Prism.highlight(increasedSpaceContent, grammar, lang))}</code></pre>`
-      : html`<pre>${increasedSpaceContent}</pre>`;
+      ? html`<pre tabindex="0" role="region" aria-label="${label}"><code>${unsafeHTML(Prism.highlight(increasedSpaceContent, grammar, lang))}</code></pre>`
+      : html`<pre tabindex="0" role="region" aria-label="${label}">${increasedSpaceContent}</pre>`;
   }
 
   /**

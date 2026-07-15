@@ -221,7 +221,7 @@ export default class ApiResponse extends LitElement {
             ? ''
             : html`
               <div class="tab-panel col">
-                <div class="tab-buttons row" role="ta" @click="${(e) => { if (e.target.tagName.toLowerCase() === 'button') { this.activeSchemaTab = e.target.dataset.tab; } }}" @keydown="${(e) => {
+                <div class="tab-buttons row" role="tablist" @click="${(e) => { if (e.target.tagName.toLowerCase() === 'button') { this.activeSchemaTab = e.target.dataset.tab; } }}" @keydown="${(e) => {
                   const b = e.target;
                   if (b.tagName.toLowerCase() !== 'button') {return;}
                   const i = Array.from(b.parentNode.children).indexOf(b);
@@ -244,8 +244,8 @@ export default class ApiResponse extends LitElement {
                   }
                   e.target.parentElement.children[newIndex].focus();
                 }}">
-                  <button class="tab-btn ${this.activeSchemaTab === 'model' ? 'active' : ''}" id="resp-model-button" aria-controls="resp-model-body" aria-selected="${this.activeSchemaTab === 'model'}" tabindex="${this.activeSchemaTab === 'model' ? 0 : '-1'}" data-tab='model'>${getI18nText('operations.model')}</button>
-                  <button class="tab-btn ${this.activeSchemaTab !== 'model' ? 'active' : ''}" id="resp-body-button" aria-controls="resp-body-body" aria-selected="${this.activeSchemaTab !== 'model'}" tabindex="${this.activeSchemaTab !== 'model' ? 0 : '-1'}" data-tab='body'>${getI18nText('operations.example')}</button>
+                  <button class="tab-btn ${this.activeSchemaTab === 'model' ? 'active' : ''}" id="resp-model-button" aria-controls="resp-model-body" role="tab" aria-selected="${this.activeSchemaTab === 'model'}" tabindex="${this.activeSchemaTab === 'model' ? 0 : '-1'}" data-tab='model'>${getI18nText('operations.model')}</button>
+                  <button class="tab-btn ${this.activeSchemaTab !== 'model' ? 'active' : ''}" id="resp-body-button" aria-controls="resp-body-body" role="tab" aria-selected="${this.activeSchemaTab !== 'model'}" tabindex="${this.activeSchemaTab !== 'model' ? 0 : '-1'}" data-tab='body'>${getI18nText('operations.example')}</button>
                   <div style="flex:1"></div>
                   ${Object.keys(this.mimeResponsesForEachStatus[status]).length === 1
                     ? html`<span class='small-font-size gray-text' style='align-self:center; margin-top:8px;'> ${Object.keys(this.mimeResponsesForEachStatus[status])[0]} </span>`
