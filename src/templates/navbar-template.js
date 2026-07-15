@@ -158,7 +158,7 @@ export default function navbarTemplate() {
                     </div>`
                   )}
                 </div>
-                <div class='nav-bar-paths-under-tag'>
+                <div class="nav-bar-paths-under-tag">
                   <!-- Paths in each tag (endpoints) -->
                   ${tag.paths.filter((v) => pathIsInSearch(this.matchPaths, v)).map((p) => html`
                   <div class='nav-bar-path ${this.usePathInNavBar ? 'small-font' : ''}'
@@ -223,7 +223,7 @@ export default function navbarTemplate() {
                 <div class="nav-bar-section-wrapper" id="nav-section-cmp--${componentInfo.name.toLowerCase()}" style="display: ${component.expanded ? 'block' : 'none'}">
                   <div class="nav-bar-paths-under-tag">
                     ${component.subComponents.filter(s => componentIsInSearch(this.matchPaths, s)).map((p) => html`
-                      <div class='nav-bar-path' data-content-id='cmp--${p.id}' id='link-cmp--${p.id}' @click='${(e) => this.scrollToEventTarget(e, false)}'>
+                      <div class='nav-bar-path' data-content-id='cmp--${p.id}' id='link-cmp--${p.id}' @click='${(e) => this.scrollToEventTarget(e, false)}' role="link" tabindex="0" @keydown = '${(e) => { if (e.key === 'Enter') { e.target.click(); }}}'>
                         <span> ${p.name} </span>
                       </div>`
                     )}
