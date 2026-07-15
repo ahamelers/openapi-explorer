@@ -153,7 +153,8 @@ export default css`
         visibility: hidden;
         overflow-wrap: break-word;
       }
-      .tooltip:hover {
+      .tooltip:hover,
+      .tooltip:focus {
         color: var(--primary-color);
         border-color: var(--primary-color);
       }
@@ -222,4 +223,74 @@ export default css`
         .main-content-inner {
           padding: 24px;
         }
-      }`;
+      }
+
+      .body {
+        flex-direction: row-reverse;
+      }
+      .nav-bar-paths-under-tag .nav-bar-path,
+      .nav-bar-path:hover,
+      .body a {
+        text-decoration: underline;
+      }
+      .nav-bar-paths-under-tag .nav-bar-path {
+        color: var(--secondary-color)
+      }
+      .body a:visited {
+        color: var(--purple);
+      }
+      .nav-bar-paths-under-tag .nav-bar-path:hover,
+      .body a:hover, .body a:focus {
+        color: var(--hover-color);
+      }
+      .nav-bar-paths-under-tag .nav-bar-path:active,
+      .body a:active {
+        color: var(--red);
+      }
+      .main-content-inner {
+        padding: 2px !important;
+        padding-right: 5ch !important;
+      }
+      @media screen and (max-width: 760px) {
+        .main-content-inner {
+          padding-right: 2px !important;
+        }
+      }
+      .section-gap--focused-mode {
+        padding: 5px 0 0 !important;
+      }
+      .sticky-scroll-element {
+        z-index: 0 !important;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        color: var(--primary-color);
+        font-weight: normal;
+      }
+      h2 {
+        margin-top: calc(var(--spacing-base) * 3.75);
+        margin-bottom: calc(var(--spacing-base) * 2);
+        font-size: 1.65rem !important;
+        line-height: 2rem;
+      }
+      h3 {
+        margin-top: calc(var(--spacing-base) * 3.5) !important;
+        margin-bottom: calc(var(--spacing-base) * 1.5);
+        font-size: 1.4rem !important;
+        line-height: 1.75rem;
+      }
+      h4 {
+        margin-top: calc(var(--spacing-base) * 3);
+        margin-bottom: calc(var(--spacing-base) * 1.5);
+        font-size: 1.25rem !important;
+        line-height: 1.5rem;
+      }
+      h5, h6 {
+        margin-top: calc(var(--spacing-base) * 2);
+        margin-bottom: var(--spacing-base);
+        font-size: 1.125rem !important;
+        line-height: 1.5rem;
+      }
+      h6 {
+        font-style: italic;
+      }
+    `;

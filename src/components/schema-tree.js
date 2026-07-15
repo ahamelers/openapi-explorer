@@ -83,9 +83,8 @@ export default class SchemaTree extends LitElement {
         margin-left: -2px;
       }
       .open-bracket:hover {
-        color:var(--primary-color);
-        background-color:var(--hover-color);
-        border: 1px solid var(--border-color);
+        color:var(--hover-color);
+        border: thin solid var(--hover-color);
       }
       .close-bracket {
         display:inline-block;

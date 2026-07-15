@@ -2,27 +2,27 @@ export default {
   translation: {
     'menu': {
       'menu': 'API Menu',
-      'filter': 'Filter',
-      'search': 'Search',
+      'filter': 'Filter API documentation',
+      'search': 'Advanced search',
       'overview': 'Overview',
       'api-servers': 'API Servers',
       'authentication': 'Authentication',
-      'operations': 'OPERATIONS',
-      'components': 'COMPONENTS',
+      'operations': 'Operations',
+      'components': 'Components',
       'schemas': 'Schemas',
-      'callbacks': 'CALLBACKS'
+      'callbacks': 'Callbacks'
     },
     'headers': {
-      'api-servers': 'API SERVER',
-      'authentication': 'AUTHENTICATION'
+      'api-servers': 'API server',
+      'authentication': 'Authentication'
     },
     'overview': {
       'email': 'Email',
-      'terms-of-service': 'Terms of Service'
+      'terms-of-service': 'Terms of service'
     },
     'api-servers': {
-      'server-variables': 'SERVER VARIABLES',
-      'selected': 'SELECTED'
+      'server-variables': 'Server variables',
+      'selected': 'Selected'
     },
     'authentication': {
       'auth-header': 'Authorization header',
@@ -34,40 +34,40 @@ export default {
       'requires': 'Requires',
       'http-basic-note': 'Base 64 encoded username:password',
       'in-auth-header': 'in Authorization header',
-      'set': 'SET',
-      'remove': 'REMOVE',
-      'clear': 'CLEAR ALL API KEYS',
-      'update': 'UPDATE',
-      'get': 'GET TOKEN'
+      'set': 'Set',
+      'remove': 'Remove',
+      'clear': 'Clear all API keys',
+      'update': 'Update',
+      'get': 'Get token'
     },
     'operations': {
-      'request': 'REQUEST',
-      'callback-request': 'CALLBACK REQUEST',
-      'request-body': 'REQUEST BODY',
-      'model': 'MODEL',
-      'body': 'BODY',
-      'form': 'FORM',
-      'request-headers': 'REQUEST HEADERS',
-      'clear': 'CLEAR',
-      'clear-response': 'CLEAR RESPONSE',
-      'execute': 'EXECUTE',
-      'response': 'RESPONSE',
-      'response-headers': 'RESPONSE HEADERS',
-      'example': 'EXAMPLE',
-      'webhook': 'WEBHOOK',
-      'deprecated': 'DEPRECATED',
-      'callback-response': 'CALLBACK RESPONSE',
-      'response-status': 'Response Status',
+      'request': 'Request',
+      'callback-request': 'Callback request',
+      'request-body': 'Request body',
+      'model': 'Model',
+      'body': 'Body',
+      'form': 'Form',
+      'request-headers': 'Request headers',
+      'clear': 'Clear',
+      'clear-response': 'Clear response',
+      'execute': 'Execute',
+      'response': 'Response',
+      'response-headers': 'Response headers',
+      'example': 'Example',
+      'webhook': 'Webhook',
+      'deprecated': 'Deprecated',
+      'callback-response': 'Callback response',
+      'response-status': 'Response status',
       'fetch-fail': 'Failed to fetch (Check the browser network tab for more information.)',
       'copy': 'Copy',
       'copied': 'Copied'
     },
     'parameters': {
-      path: 'PATH PARAMETERS',
-      string: 'QUERY-STRING PARAMETERS',
-      headers: 'REQUEST HEADERS',
-      cookies: 'COOKIES',
-      samples: 'CODE SAMPLES'
+      path: 'Part parameters',
+      string: 'Query string parameters',
+      headers: 'Request headers',
+      cookies: 'Cookies',
+      samples: 'Code samples'
     },
     'schemas': {
       'collapse-desc': 'Collapse',

@@ -44,10 +44,12 @@ export default css`
   color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
+.m-btn.primary:hover,
+.m-btn.primary:focus,
 .m-btn.primary:focus-visible {
-  color: var(--secondary-color);
+  color: var(--primary-btn-text-color);
   background-color: var(--primary-color);
-  border-color: var(--secondary-color);
+  border-color: var(--primary-btn-text-color);
 }
 .m-btn.nav { border: 2px solid var(--secondary-color); }
 .m-btn.nav:hover,
@@ -71,6 +73,10 @@ input, textarea, select, button {
 }
 button {
   font-family: var(--font-regular);
+}
+
+button:focus {
+  outline: thin solid var(--hover-color) !important;
 }
 
 /* Form Inputs */
