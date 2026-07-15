@@ -253,7 +253,7 @@ export default class ApiResponse extends LitElement {
                   }
                 </div>
                 ${html`<div class='tab-content col' role="tabpanel" tabindex="0" id='resp-body-body' aria-labelledby='resp-body-button' style='flex:1; display: ${this.activeSchemaTab === 'body' ? 'block' : 'none'}'>
-                  ${this.mimeExampleTemplate(this.mimeResponsesForEachStatus[status][this.selectedMimeType])}}
+                  ${this.mimeExampleTemplate(this.mimeResponsesForEachStatus[status][this.selectedMimeType])}
                 </div>`}
                 ${html`<div class='tab-content col' role="tabpanel" tabindex="0" id='resp-model-body' style='flex:1; display: ${this.activeSchemaTab === 'body' ? 'none' : 'block'}'>
                   ${this.mimeSchemaTemplate(this.mimeResponsesForEachStatus[status][this.selectedMimeType])}

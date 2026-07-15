@@ -130,7 +130,7 @@ class SyntaxHighlighter extends LitElement {
       <button 
         class="m-btn outline-primary toolbar-copy-btn" 
         @click='${this.copyToClipboard}'
-        aria-label="Copy ${label}"
+        aria-label="${getI18nText('operations.copy')} ${label}"
         aria-live="polite"
         part="btn btn-fill btn-copy">${getI18nText('operations.copy')}</button>
         ${content}
