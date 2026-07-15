@@ -311,6 +311,7 @@ export default class OpenApiExplorer extends LitElement {
   async onShowSearchModalClicked() {
     this.showAdvancedSearchDialog = true;
     // wait for the dialog to render
+    this.shadowRoot.getElementById('nav-advanced-search').setAttribute('aria-expanded', true);
     await sleep(10);
     const inputEl = this.shadowRoot.getElementById('advanced-search-dialog-input');
     if (inputEl) {
