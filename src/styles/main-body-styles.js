@@ -225,9 +225,6 @@ export default css`
         }
       }
 
-      .body {
-        flex-direction: row-reverse;
-      }
       .nav-bar-paths-under-tag .nav-bar-path,
       .nav-bar-path:hover,
       .body a {

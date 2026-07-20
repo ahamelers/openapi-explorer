@@ -33,9 +33,6 @@ export default function mainBodyTemplate() {
     ${this.hideSearch ? '' : advancedSearchTemplate.call(this)}
 
     <div id='the-main-body' class="body">
-      <!-- Side Nav -->
-      ${(this.renderStyle === 'focused' && this.resolvedSpec) ? navbarTemplate.call(this) : ''}
-
       <!-- Main Content -->
       ${this.loading === true
         ? html`<slot name="loader"><div class="loader"></div></slot>`
@@ -70,6 +67,9 @@ export default function mainBodyTemplate() {
           </div>
         </main>`
       }
+
+      <!-- Side Nav -->
+      ${(this.renderStyle === 'focused' && this.resolvedSpec) ? navbarTemplate.call(this) : ''}
     </div>  
   `;
 }
