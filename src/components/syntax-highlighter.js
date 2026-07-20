@@ -47,8 +47,7 @@ class SyntaxHighlighter extends LitElement {
       content: { type: Object },
       label: { type: String },
       language: { type: String, attribute: 'language' },
-      mimeType: { type: String, attribute: 'mime-type' },
-      label: { type: String, attribute: 'aria-label' },
+      mimeType: { type: String, attribute: 'mime-type' }
     };
   }
 
@@ -116,7 +115,6 @@ class SyntaxHighlighter extends LitElement {
    */
   renderHighlight() {
     const lang = this.detectLanguage();
-    const label = this.label?.toLowerCase();
     const grammar = Prism.languages[lang];
 
     if (typeof this.content !== 'string') {
